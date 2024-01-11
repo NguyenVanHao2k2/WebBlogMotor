@@ -1,0 +1,123 @@
+/* ---------------------------------------------------------------------------------------------------- */
+@media (width > 480px) {
+  .banner__grid {
+    grid-auto-rows: 280px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .banner__card:nth-child(4) {
+    grid-area: 2/1/3/2;
+  }
+
+  .banner__trip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner__trip__card:nth-child(even) {
+    grid-auto-flow: unset;
+    direction: unset;
+  }
+
+  .banner__trip__card:nth-child(4n),
+  .banner__trip__card:nth-child(4n - 1) {
+    grid-auto-flow: dense;
+    direction: rtl;
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram__flex img {
+    max-width: 135px;
+  }
+}
+/* -------------------------------------------------------------------------------------- */
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__bar {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: 100%;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .css-mobile-logo {
+    display: block;
+    max-width: 180px;
+  }
+
+  .banner__grid {
+    grid-auto-rows: 320px;
+  }
+
+  .banner__grid img {
+    display: flex;
+  }
+
+  .banner__trip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .banner__trip__card:nth-child(4n),
+  .banner__trip__card:nth-child(4n - 1) {
+    grid-auto-flow: unset;
+    direction: unset;
+  }
+
+  .banner__trip__card:nth-child(6n),
+  .banner__trip__card:nth-child(6n - 1),
+  .banner__trip__card:nth-child(6n - 2) {
+    grid-auto-flow: dense;
+    direction: rtl;
+  }
+
+  .feature__grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .feature__content > div {
+    transform: translateX(2rem);
+  }
+
+  .feature__content video {
+    transform: translateX(-2rem);
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instagram__flex img {
+    max-width: 150px;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer__col:nth-child(1) {
+    grid-area: 1/2/2/3;
+  }
+
+  .footer__col form {
+    margin-inline-start: unset;
+  }
+}
